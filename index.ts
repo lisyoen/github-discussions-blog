@@ -4,7 +4,11 @@ import express from 'express';
 const app = express();
 const PORT = 8081; // 포트를 8081로 변경했습니다.
 
-const GITHUB_TOKEN = '창연님_토큰_여기에';
+import dotenv from 'dotenv';
+dotenv.config();
+
+const GITHUB_TOKEN = process.env.GITHUB_TOKEN as string;
+
 const REPO_OWNER = 'lisyoen';
 const REPO_NAME = 'blog';
 
